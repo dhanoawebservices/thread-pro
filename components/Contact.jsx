@@ -41,7 +41,7 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div className="bg-gray-800 p-8 rounded-2xl shadow-xl">
+          <div className="bg-gray-800 p-8 rounded-2xl border border-gray-700">
             <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
             <p className="text-gray-400 mb-8">Get in touch with us and we'll get back to you within 24 hours.</p>
 
@@ -128,7 +128,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg transition-all duration-200 transform hover:scale-105 font-semibold shadow-lg flex items-center justify-center space-x-2"
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg transition-all duration-200 transform hover:scale-105 font-semibold flex items-center justify-center space-x-2"
               >
                 <Send size={20} />
                 <span>Send Message</span>
@@ -138,7 +138,7 @@ export default function Contact() {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <div className="bg-gray-800 p-6 rounded-2xl shadow-xl">
+            <div className="bg-gray-800 p-6 rounded-2xl border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
               
               <div className="space-y-6">
@@ -188,7 +188,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="bg-gray-800 p-6 rounded-2xl shadow-xl">
+            <div className="bg-gray-800 p-6 rounded-2xl border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-4">Why Choose ThreadPro?</h3>
               <ul className="space-y-3">
                 {[
