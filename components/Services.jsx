@@ -81,8 +81,8 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Our <span className="bg-gradient-to-r from-[#003366] to-[#5c9ce5] bg-clip-text text-transparent">Services</span>
+          <h2 className="text-3xl lg:text-5xl font-bold text-primary mb-6">
+            Our Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             From corporate branding to personal projects, we offer comprehensive embroidery solutions tailored to your specific needs and requirements.
@@ -97,7 +97,7 @@ export default function Services() {
               className="bg-white p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02] group border border-gray-200 hover:border-[#003366]/30 shadow-sm hover:shadow-md"
             >
               <div className="mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-[#003366] to-[#5c9ce5] rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
