@@ -1,85 +1,104 @@
-import { Star, Users, Award } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Star } from 'lucide-react';
+import Image from 'next/image';
 
-export default function Hero() {
+const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-[hsl(240_10%_3.9%)] via-[hsl(250_85%_15%)] to-[hsl(280_85%_20%)] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:pb-28 lg:pt-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
-          <div className="space-y-8">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-purple-800/50 text-purple-200 text-sm font-medium border border-purple-700">
-              ⭐ Premium Embroidery Services
-            </div>
-            
+          <div className="space-y-10">
             <div className="space-y-6">
-              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                Professional{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Embroidery
-                </span>{' '}
-                for Modern Brands
+              <div className="flex items-center gap-3">
+                <div className="flex">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star 
+                      key={star} 
+                      size={18} 
+                      className="text-primary fill-current" 
+                    />
+                  ))}
+                </div>
+                <span className="text-sm text-slate-600">
+                  Trusted by 10,000+ customers
+                </span>
+              </div>
+
+              <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
+                Premium Threads for
+                <span className="text-primary block">Modern Living</span>
               </h1>
-              <p className="text-xl text-gray-300 leading-relaxed max-w-lg">
-                Transform your brand identity with professional embroidery services. From corporate apparel to custom designs, we bring your vision to life with cutting-edge technology and craftsmanship.
+
+              <p className="text-lg text-slate-600 leading-relaxed max-w-lg">
+                Discover our curated collection of high-quality fabrics, threads, and textiles. 
+                Crafted for professionals and enthusiasts who demand excellence.
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="flex flex-wrap gap-6">
-              <div className="flex items-center space-x-2">
-                <div className="flex items-center text-yellow-400">
-                  <Star fill="currentColor" className="w-5 h-5" />
-                  <Star fill="currentColor" className="w-5 h-5" />
-                  <Star fill="currentColor" className="w-5 h-5" />
-                  <Star fill="currentColor" className="w-5 h-5" />
-                  <Star fill="currentColor" className="w-5 h-5" />
-                </div>
-                <span className="font-semibold text-white">4.9/5</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Users className="w-5 h-5 text-blue-400" />
-                <span className="font-semibold text-white">500+</span>
-                <span className="text-gray-300">Happy Clients</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Award className="w-5 h-5 text-blue-400" />
-                <span className="font-semibold text-white">15 Years</span>
-                <span className="text-gray-300">Experience</span>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-primary text-white px-8 py-4 rounded-lg hover:bg-[#002244] transition-all duration-200 flex items-center justify-center gap-2 group">
+                <span className="font-semibold">Shop Collection</span>
+                <ArrowRight 
+                  size={20} 
+                  className="group-hover:translate-x-1 transition-transform duration-200" 
+                />
+              </button>
+              <button className="border border-slate-300 text-slate-700 px-8 py-4 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-all duration-200 font-semibold">
+                Watch Story
+              </button>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-full transition-all duration-200 transform hover:scale-105 font-semibold">
-                Start Your Project
-              </button>
-              <button className="border-2 border-gray-600 hover:border-blue-500 text-gray-300 hover:text-blue-400 px-8 py-4 rounded-full transition-all duration-200 font-semibold">
-                View Portfolio
-              </button>
+            <div className="flex flex-wrap gap-8 pt-6">
+              <div className="min-w-[100px]">
+                <div className="text-3xl font-bold text-slate-900">500+</div>
+                <div className="text-sm text-slate-600">Premium Products</div>
+              </div>
+              <div className="min-w-[100px]">
+                <div className="text-3xl font-bold text-slate-900">24/7</div>
+                <div className="text-sm text-slate-600">Expert Support</div>
+              </div>
+              <div className="min-w-[100px]">
+                <div className="text-3xl font-bold text-slate-900">99%</div>
+                <div className="text-sm text-slate-600">Satisfaction Rate</div>
+              </div>
             </div>
           </div>
 
           {/* Hero Image */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden">
-              <img
-                src="https://images.pexels.com/photos/6292439/pexels-photo-6292439.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Professional embroidery workshop"
-                className="w-full h-96 lg:h-[500px] object-cover"
+          <div className="relative h-full">
+            <div className="relative z-10 h-full">
+              <Image 
+                src="/images/2.jpg" 
+                alt="Premium Thread Collection"
+                className="w-full h-[550px] object-cover rounded-2xl shadow-2xl"
+                width={800}
+                height={600}
+                priority
               />
-              
-              {/* Overlay badges */}
-              <div className="absolute top-6 left-6">
-                <div className="bg-gray-800/90 backdrop-blur-sm rounded-lg p-3 border border-gray-700">
-                  <div className="text-sm font-semibold text-white">24/7 Support</div>
-                  <div className="text-xs text-gray-300">Always here to help</div>
+            </div>
+
+            {/* Floating Cards */}
+            <div className="absolute -top-4 -left-4 bg-white p-5 rounded-xl shadow-lg z-20 max-w-[220px]">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Star className="text-primary" size={20} />
+                </div>
+                <div>
+                  <div className="font-semibold text-nowrap text-slate-800">Premium Quality</div>
+                  <div className="text-sm text-slate-600">100% Authentic</div>
                 </div>
               </div>
-              
-              <div className="absolute bottom-6 right-6">
-                <div className="bg-green-600/90 backdrop-blur-sm rounded-lg p-3 text-white">
-                  <div className="text-sm font-semibold">Fast Delivery</div>
-                  <div className="text-xs">Quick turnaround</div>
+            </div>
+
+            <div className="absolute -bottom-4 -right-4 bg-white p-5 rounded-xl shadow-lg z-20 max-w-[220px]">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-green-600 font-bold text-xl">✓</span>
+                </div>
+                <div>
+                  <div className="font-semibold text-slate-800 text-nowrap">Fast Delivery</div>
+                  <div className="text-sm text-slate-600 text-nowrap">2-3 Business Days</div>
                 </div>
               </div>
             </div>
@@ -88,4 +107,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+};
+
+export default Hero;
